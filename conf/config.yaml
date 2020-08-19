@@ -1,0 +1,32 @@
+#运行模式
+app:
+  log:
+    savePath: "logs/"
+    saveName: "log"
+    fileExt: "log"
+    timeFormat: "20060102"
+  image:
+    prefixUrl: "http://127.0.0.1:8080"
+    savePath: "upload/images/"
+    maxSize: 5
+    allowExts: [".jpg",".jpeg",".png"]
+  runMode: "debug"
+  secret: "!!#$456"
+  pageSize: 10
+  runtimeRootPath: "runtime/"
+#服务运行配置
+server:
+  port: 8080
+  readTimeOut: 60
+  writeTimeOut: 60
+
+database:
+  type: "mysql"
+  user: "root"
+  pwd: "123456"
+  url: "127.0.0.1:3306"
+  name: "web"
+  tablePrefix: "blog_"
+
+
+

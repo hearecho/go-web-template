@@ -2,8 +2,8 @@ package utils
 
 import (
 	"fmt"
-	"github.com/hearecho/go-pro/go-web/pkg/logging"
-	"github.com/hearecho/go-pro/go-web/pkg/setting"
+	"github.com/hearecho/go-web-template/pkg/logging"
+	"github.com/hearecho/go-web-template/pkg/setting"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"time"

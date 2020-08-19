@@ -2,8 +2,8 @@ package jwt
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hearecho/go-pro/go-web/pkg/resp"
-	"github.com/hearecho/go-pro/go-web/pkg/utils"
+	"github.com/hearecho/go-web-template/pkg/resp"
+	"github.com/hearecho/go-web-template/pkg/utils"
 	"net/http"
 	"time"
 )

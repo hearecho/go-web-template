@@ -2,9 +2,10 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hearecho/go-pro/go-web/pkg/logging"
-	"github.com/hearecho/go-pro/go-web/pkg/resp"
-	"github.com/hearecho/go-pro/go-web/pkg/upload"
+	"github.com/hearecho/go-web-template/pkg/logging"
+	"github.com/hearecho/go-web-template/pkg/resp"
+	"github.com/hearecho/go-web-template/pkg/upload"
+
 	"net/http"
 )
 

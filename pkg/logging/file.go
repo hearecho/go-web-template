@@ -2,8 +2,8 @@ package logging
 
 import (
 	"fmt"
-	"github.com/hearecho/go-pro/go-web/pkg/file"
-	"github.com/hearecho/go-pro/go-web/pkg/setting"
+	"github.com/hearecho/go-web-template/pkg/file"
+	"github.com/hearecho/go-web-template/pkg/setting"
 	"os"
 	"time"
 

@@ -1,4 +1,4 @@
-module github.com/hearecho/go-pro/go-web
+module github.com/hearecho/go-web-template
 
 go 1.14
 
@@ -30,6 +30,6 @@ require (
 )
 
 replace (
-	github.com/hearecho/go-pro/go-web/pkg/resp => D:/go-pro/go-web/pkg/resp
-	github.com/hearecho/go-pro/go-web/pkg/setting => D:/go-pro/go-web/pkg/setting
+	github.com/hearecho/go-web-template/pkg/resp => D:/go-web-template/pkg/resp
+	github.com/hearecho/go-web-template/setting => D:/go-web-template/pkg/setting
 )

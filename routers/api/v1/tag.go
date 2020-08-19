@@ -3,12 +3,11 @@ package v1
 import (
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-	_ "github.com/hearecho/go-pro/go-web/docs"
-	"github.com/hearecho/go-pro/go-web/models"
-	"github.com/hearecho/go-pro/go-web/pkg/resp"
-	"github.com/hearecho/go-pro/go-web/pkg/setting"
-	"github.com/hearecho/go-pro/go-web/pkg/utils"
-	"github.com/hearecho/go-pro/go-web/pkg/web"
+	_ "github.com/hearecho/go-web-template/docs"
+	"github.com/hearecho/go-web-template/models"
+	"github.com/hearecho/go-web-template/pkg/resp"
+	"github.com/hearecho/go-web-template/pkg/setting"
+	"github.com/hearecho/go-web-template/pkg/utils"
 	"github.com/unknwon/com"
 	"net/http"
 )

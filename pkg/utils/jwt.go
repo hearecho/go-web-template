@@ -1,8 +1,8 @@
 package utils
 
 import (
-	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/hearecho/go-pro/go-web/pkg/setting"
+	"github.com/dgrijalva/jwt-go"
+	"github.com/hearecho/go-web-template/pkg/setting"
 	"time"
 )
 

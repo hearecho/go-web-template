@@ -2,11 +2,11 @@ package routers
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hearecho/go-pro/go-web/middleware/jwt"
-	"github.com/hearecho/go-pro/go-web/pkg/setting"
-	"github.com/hearecho/go-pro/go-web/pkg/upload"
-	"github.com/hearecho/go-pro/go-web/routers/api"
-	v1 "github.com/hearecho/go-pro/go-web/routers/api/v1"
+	"github.com/hearecho/go-web-template/middleware/jwt"
+	"github.com/hearecho/go-web-template/pkg/setting"
+	"github.com/hearecho/go-web-template/pkg/upload"
+	"github.com/hearecho/go-web-template/routers/api"
+	v1 "github.com/hearecho/go-web-template/routers/api/v1"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"net/http"

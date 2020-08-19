@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/hearecho/go-pro/go-web/pkg/utils"
+	"github.com/hearecho/go-web-template/pkg/utils"
 )
 
 type Tag struct {

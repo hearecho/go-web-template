@@ -20,7 +20,7 @@ func InitRouter() *gin.Engine {
 
 	//静态文件
 	r.StaticFS("/upload/images", http.Dir(upload.GetImageFullPath()))
-	r.GET("/auth", api.GetAuth)
+	r.POST("/auth", api.GetAuth)
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	r.POST("/upload", api.UploadImage)
 	apiv1 := r.Group("/api/v1")

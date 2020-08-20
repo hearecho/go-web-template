@@ -58,7 +58,7 @@ func AddTag(c *gin.Context) {
 	r := resp.R{}.SetPath(c.Request.URL.Path)
 	httpCode, errCode := web.BindAndValid(c, &form)
 	if errCode != resp.SUCCESS {
-		r.SetStatus(errCode)
+		r = r.SetStatus(errCode)
 		c.JSON(httpCode, r)
 		return
 	}
@@ -68,7 +68,7 @@ func AddTag(c *gin.Context) {
 	} else {
 		r = r.SetStatus(resp.ERROR_EXIST_TAG)
 	}
-	c.JSON(200, r)
+	c.JSON(httpCode, r)
 }
 
 // @Summary Update article tag

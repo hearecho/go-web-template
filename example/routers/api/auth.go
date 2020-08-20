@@ -3,10 +3,10 @@ package api
 import (
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-	"github.com/hearecho/go-web-template/models"
-	"github.com/hearecho/go-web-template/pkg/logging"
-	"github.com/hearecho/go-web-template/pkg/resp"
-	"github.com/hearecho/go-web-template/pkg/utils"
+	"github.com/hearecho/go-web-template/logging"
+	"github.com/hearecho/go-web-template/resp"
+	"github.com/hearecho/go-web-template/utils"
+	"web/models"
 )
 
 type auth struct {
@@ -14,7 +14,7 @@ type auth struct {
 	Password string `valid:"Required; MaxSize(50)"`
 }
 
-func GetAuth(c *gin.Context)  {
+func GetAuth(c *gin.Context) {
 	username := c.Query("username")
 	password := c.Query("password")
 
@@ -25,9 +25,9 @@ func GetAuth(c *gin.Context)  {
 	data := make(map[string]interface{})
 	r := resp.R{}.Ok().SetData(data).SetPath(c.Request.URL.Path)
 	if ok {
-		isExit := models.CheckAuth(username,password)
+		isExit := models.CheckAuth(username, password)
 		if isExit {
-			token,err := utils.GenerateToken(username,password)
+			token, err := utils.GenerateToken(username, password)
 			if err != nil {
 				r = r.SetStatus(resp.ERROR_AUTH_TOKEN)
 			} else {
@@ -38,7 +38,7 @@ func GetAuth(c *gin.Context)  {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			logging.Error(err.Key,err.Message)
+			logging.Error(err.Key, err.Message)
 		}
 	}
 	c.JSON(200, r)

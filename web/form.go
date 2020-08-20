@@ -3,8 +3,8 @@ package web
 import (
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-	"github.com/hearecho/go-web-template/pkg/logging"
-	"github.com/hearecho/go-web-template/pkg/resp"
+	"github.com/hearecho/go-web-template/logging"
+	"github.com/hearecho/go-web-template/resp"
 	"net/http"
 )
 

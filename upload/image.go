@@ -2,10 +2,10 @@ package upload
 
 import (
 	"fmt"
-	"github.com/hearecho/go-web-template/pkg/file"
-	"github.com/hearecho/go-web-template/pkg/logging"
-	"github.com/hearecho/go-web-template/pkg/setting"
-	"github.com/hearecho/go-web-template/pkg/utils"
+	"github.com/hearecho/go-web-template/file"
+	"github.com/hearecho/go-web-template/logging"
+	"github.com/hearecho/go-web-template/setting"
+	"github.com/hearecho/go-web-template/utils"
 	"log"
 	"mime/multipart"
 	"os"
@@ -76,11 +76,5 @@ func CheckImage(src string) error {
 	return nil
 }
 
-/**
-判断图片是否存在
- */
-func CheckImageExist(src string) bool  {
-
-}
 
 

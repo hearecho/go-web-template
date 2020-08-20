@@ -16,7 +16,7 @@ app:
   runtimeRootPath: "runtime/"
 #服务运行配置
 server:
-  port: 8080
+  port: 8081
   readTimeOut: 60
   writeTimeOut: 60
 

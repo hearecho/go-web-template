@@ -2,7 +2,7 @@ package utils
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hearecho/go-web-template/pkg/setting"
+	"github.com/hearecho/go-web-template/setting"
 	"github.com/unknwon/com"
 )
 

@@ -3,13 +3,14 @@ package v1
 import (
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-	_ "github.com/hearecho/go-web-template/docs"
-	"github.com/hearecho/go-web-template/models"
-	"github.com/hearecho/go-web-template/pkg/resp"
-	"github.com/hearecho/go-web-template/pkg/setting"
-	"github.com/hearecho/go-web-template/pkg/utils"
+	"github.com/hearecho/go-web-template/resp"
+	"github.com/hearecho/go-web-template/setting"
+	"github.com/hearecho/go-web-template/utils"
+	"github.com/hearecho/go-web-template/web"
 	"github.com/unknwon/com"
 	"net/http"
+	_ "web/docs"
+	"web/models"
 )
 
 // @Summary 获取全部标签
@@ -43,6 +44,7 @@ type AddTagForm struct {
 	CreatedBy string `form:"created_by" valid:"Required;MaxSize(100)"`
 	State     int    `form:"state" valid:"Range(0,1)"`
 }
+
 // @Summary 添加标签
 // @Produce  json
 // @Param name query string true "Name"
@@ -54,15 +56,15 @@ type AddTagForm struct {
 func AddTag(c *gin.Context) {
 	var form AddTagForm
 	r := resp.R{}.SetPath(c.Request.URL.Path)
-	httpCode,errCode := web.BindAndValid(c,&form)
+	httpCode, errCode := web.BindAndValid(c, &form)
 	if errCode != resp.SUCCESS {
 		r.SetStatus(errCode)
-		c.JSON(httpCode,r)
+		c.JSON(httpCode, r)
 		return
 	}
 	if !models.ExitTagByName(form.Name) {
 		r = r.Ok()
-		models.AddTag(form.Name,form.State,form.CreatedBy)
+		models.AddTag(form.Name, form.State, form.CreatedBy)
 	} else {
 		r = r.SetStatus(resp.ERROR_EXIST_TAG)
 	}

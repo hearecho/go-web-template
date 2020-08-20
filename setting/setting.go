@@ -40,8 +40,29 @@ type DataBase struct {
 	TablePrefix string
 }
 
-var AppSetting App
-var ServerSetting Server
+var AppSetting = App{
+	Log:             log{
+		SavePath:   "logs/",
+		SaveName:   "log",
+		FileExt:    "log",
+		TimeFormat: "20060102",
+	},
+	Image:           image{
+		PrefixUrl: "",
+		SavePath:  "upload/images/",
+		MaxSize:   0,
+		AllowExts: nil,
+	},
+	RunMode:         "debug",
+	Secret:          "123456",
+	PageSize:        5,
+	RuntimeRootPath: "runtime/",
+}
+var ServerSetting = Server{
+	Port:         8080,
+	ReadTimeOut:  60*time.Second,
+	WriteTimeOut: 60*time.Second,
+}
 var DBSetting DataBase
 
 func init() {

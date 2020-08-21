@@ -16,6 +16,7 @@ const (
 	ERROR_UPLOAD_CHECK_IMAGE_FORMAT = 20005
 	ERROR_UPLOAD_CHECK_IMAGE_FAIL   = 20006
 	ERROR_UPLOAD_SAVE_IMAGE_FAIL    = 20007
+	ERROR_TOO_MANYREQUESTS          = 428
 )
 
 var MsgFlags = map[int]string{
@@ -32,4 +33,5 @@ var MsgFlags = map[int]string{
 	ERROR_UPLOAD_CHECK_IMAGE_FORMAT: "图片格式错误",
 	ERROR_UPLOAD_CHECK_IMAGE_FAIL:   "图片不存在",
 	ERROR_UPLOAD_SAVE_IMAGE_FAIL:    "图片保存失败",
+	ERROR_TOO_MANYREQUESTS:          "访问太过频繁",
 }

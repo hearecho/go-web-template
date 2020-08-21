@@ -3,6 +3,7 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/hearecho/go-web-template/middleware/jwt"
+	"github.com/hearecho/go-web-template/middleware/limiter"
 	"github.com/hearecho/go-web-template/setting"
 	"github.com/hearecho/go-web-template/upload"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -25,6 +26,7 @@ func InitRouter() *gin.Engine {
 	r.POST("/upload", api.UploadImage)
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use(jwt.JWT())
+	apiv1.Use(limiter.IpAcessLimiter())
 	{
 		apiv1.GET("/tags", v1.GetTags)
 		apiv1.POST("/tags", v1.AddTag)

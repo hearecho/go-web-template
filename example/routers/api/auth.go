@@ -27,6 +27,7 @@ func GetAuth(c *gin.Context) {
 				r = r.SetStatus(resp.ERROR_AUTH_TOKEN)
 			} else {
 				data["token"] = token
+				c.SetCookie("token",token,3600,"/","localhost",false,true)
 			}
 		} else {
 			r = r.SetStatus(resp.ERROR_AUTH)

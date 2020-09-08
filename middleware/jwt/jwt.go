@@ -8,12 +8,15 @@ import (
 	"time"
 )
 
+/**
+从cookie中获取认证信息，如果不含有token标志则截至请求
+ */
 func JWT() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		r := resp.R{}.Ok().SetPath(context.Request.URL.Path)
 
-		token := context.Query("token")
-		if token == "" {
+		token,err := context.Cookie("token")
+		if token == "" || err != nil {
 			r = r.SetStatus(resp.INVALID_PARAMS)
 		} else {
 			claims, err := utils.ParseToken(token)

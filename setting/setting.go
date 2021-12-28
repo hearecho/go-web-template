@@ -78,7 +78,10 @@ func init() {
 }
 
 func LoadDB(d *DataBase) {
-	d.Type = viper.GetString("database.type")
+	// 需要判断是否存在该条属性 如果不存在则使用默认值
+	if !viper.IsSet("database") {
+		return
+	}
 	d.User = viper.GetString("database.user")
 	d.Pwd = viper.GetString("database.pwd")
 	d.Url = viper.GetString("database.url")
@@ -87,12 +90,18 @@ func LoadDB(d *DataBase) {
 }
 
 func LoadServer(server *Server) {
+	if !viper.IsSet("server") {
+		return
+	}
 	server.Port = viper.GetInt("server.port")
 	server.ReadTimeOut = viper.GetDuration("server.readTimeOut") * time.Second
 	server.WriteTimeOut = viper.GetDuration("server.writeTimeOut") * time.Second
 }
 
 func LoadApp(app *App) {
+	if !viper.IsSet("app") {
+		return
+	}
 	app.RunMode = viper.GetString("app.runMode")
 	app.Secret = viper.GetString("app.Secret")
 	app.PageSize = viper.GetInt("app.pageSize")

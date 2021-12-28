@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8aefa33b-4623-47f7-8ad8-c6c75e40f717" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/go-web-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/go-web-template.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/routers/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/routers/api/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/jwt/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/jwt/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/form.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/form.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +36,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$PROJECT_DIR$/../code_envir/go" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../dev/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,28 +50,30 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/example/conf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -79,31 +84,50 @@
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="go-web-template" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build github.com/hearecho/go-web-template" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-web-template" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="github.com/hearecho/go-web-template" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-web-template" />
       <working_directory value="$PROJECT_DIR$/example" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/example/main.go" />
       <package value="github.com/hearecho/go-web-template" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/example/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build web/test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-web-template" />
       <working_directory value="$PROJECT_DIR$/example" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/example/test/test_iplimiter.go" />
       <package value="web/test" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/example/test/test_iplimiter.go" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="go-web-template" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <list>
@@ -131,62 +155,29 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn/" />
+      </map>
+    </environment>
     <proxy>https://goproxy.cn/</proxy>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="179" key="#GOROOT" timestamp="1597845389841">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="179" key="#GOROOT/0.0.1920.1040@0.0.1920.1040" timestamp="1597845389841" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598098535892">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598098535892" />
-    <state x="668" y="154" key="#go_build_web/test" timestamp="1598085414351">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="668" y="154" key="#go_build_web/test/0.0.1920.1040@0.0.1920.1040" timestamp="1598085414351" />
-    <state width="1429" height="256" key="GridCell.Tab.0.bottom" timestamp="1599528936796">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1429" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599528936796" />
-    <state width="1429" height="256" key="GridCell.Tab.0.center" timestamp="1599528936795">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1429" height="256" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599528936795" />
-    <state width="1429" height="256" key="GridCell.Tab.0.left" timestamp="1599528936795">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1429" height="256" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599528936795" />
-    <state width="1429" height="256" key="GridCell.Tab.0.right" timestamp="1599528936796">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1429" height="256" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599528936796" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1597929256964">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597929256964" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1597929256964">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597929256964" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1597929256964">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597929256964" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1597929256964">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597929256964" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1597845522709">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597845522709" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

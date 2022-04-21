@@ -36,6 +36,7 @@ func init() {
 		dbName))
 	if err != nil {
 		logging.Error(err.Error())
+		return
 	}
 	gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
 		return tablePrefix + defaultTableName

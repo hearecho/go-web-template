@@ -13,6 +13,7 @@ import (
 	"web/models"
 )
 
+// GetTags
 // @Summary 获取全部标签
 // @Produce  json
 // @Param name query string false "Name"
@@ -45,6 +46,7 @@ type AddTagForm struct {
 	State     int    `form:"state" valid:"Range(0,1)"`
 }
 
+// AddTag
 // @Summary 添加标签
 // @Produce  json
 // @Param name query string true "Name"
@@ -71,6 +73,7 @@ func AddTag(c *gin.Context) {
 	c.JSON(httpCode, r)
 }
 
+// EditTag
 // @Summary Update article tag
 // @Produce  json
 // @Param id path int true "ID"
@@ -117,6 +120,7 @@ func EditTag(c *gin.Context) {
 	c.JSON(200, r)
 }
 
+// DeleteTag
 // @Summary Delete article tag
 // @Produce  json
 // @Param id path int true "ID"

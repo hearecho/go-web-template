@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/hearecho/go-web-template/logging"
 	"github.com/hearecho/go-web-template/setting"
 	"net/http"
 	"web/routers"
@@ -16,5 +17,9 @@ func main() {
 		WriteTimeout:      setting.ServerSetting.WriteTimeOut,
 		MaxHeaderBytes:    1 << 20,
 	}
-	s.ListenAndServe()
+	err := s.ListenAndServe()
+	if err != nil {
+		logging.Error("Web start err")
+		return
+	}
 }

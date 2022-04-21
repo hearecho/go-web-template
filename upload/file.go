@@ -14,14 +14,14 @@ import (
 )
 
 /**
-上传图片
+上传文件
 */
 
-func GetImageFullUrl(name string) string {
-	return setting.AppSetting.Image.PrefixUrl + "/" + GetImagePath() + name
+func GetFileFullUrl(name string) string {
+	return setting.AppSetting.File.PrefixUrl + "/" + GetFilePath() + name
 }
 
-func GetImageName(name string) string {
+func GetFileName(name string) string {
 	ext := path.Ext(name)
 	fileName := strings.TrimSuffix(name, ext)
 	fileName = utils.EncodeMd5(fileName)
@@ -29,24 +29,24 @@ func GetImageName(name string) string {
 	return fileName + ext
 }
 
-func GetImagePath() string {
-	return setting.AppSetting.Image.SavePath
+func GetFilePath() string {
+	return setting.AppSetting.File.SavePath
 }
 
-func GetImageFullPath() string {
-	return setting.AppSetting.RuntimeRootPath + GetImagePath()
+func GetFileFullPath() string {
+	return setting.AppSetting.RuntimeRootPath + GetFilePath()
 }
 
-func CheckImageExt(fileName string) bool  {
+func CheckFileExt(fileName string) bool  {
 	ext := file.GetExt(fileName)
-	for _,allowExt := range setting.AppSetting.Image.AllowExts {
+	for _,allowExt := range setting.AppSetting.File.AllowExts {
 		if strings.ToUpper(allowExt) == strings.ToUpper(ext) {
 			return true
 		}
 	}
 	return false
 }
-func CheckImageSize(f multipart.File) bool {
+func CheckFileSize(f multipart.File) bool {
 	size, err := file.GetSize(f)
 	if err != nil {
 		log.Println(err)
@@ -54,10 +54,10 @@ func CheckImageSize(f multipart.File) bool {
 		return false
 	}
 
-	return size <= setting.AppSetting.Image.MaxSize
+	return size <= setting.AppSetting.File.MaxSize
 }
 
-func CheckImage(src string) error {
+func CheckFile(src string) error {
 	dir, err := os.Getwd()
 	if err != nil {
 		return fmt.Errorf("os.Getwd err: %v", err)

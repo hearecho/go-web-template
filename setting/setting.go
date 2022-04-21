@@ -8,7 +8,7 @@ import (
 
 type App struct {
 	Log             log
-	Image           image
+	File            file
 	RunMode         string
 	Secret          string
 	PageSize        int
@@ -20,7 +20,7 @@ type log struct {
 	FileExt    string
 	TimeFormat string
 }
-type image struct {
+type file struct {
 	PrefixUrl string
 	SavePath  string
 	MaxSize   int
@@ -41,13 +41,13 @@ type DataBase struct {
 }
 
 var AppSetting = App{
-	Log:             log{
+	Log: log{
 		SavePath:   "logs/",
 		SaveName:   "log",
 		FileExt:    "log",
 		TimeFormat: "20060102",
 	},
-	Image:           image{
+	File: file{
 		PrefixUrl: "",
 		SavePath:  "upload/images/",
 		MaxSize:   0,
@@ -60,8 +60,8 @@ var AppSetting = App{
 }
 var ServerSetting = Server{
 	Port:         8080,
-	ReadTimeOut:  60*time.Second,
-	WriteTimeOut: 60*time.Second,
+	ReadTimeOut:  60 * time.Second,
+	WriteTimeOut: 60 * time.Second,
 }
 var DBSetting DataBase
 
@@ -110,8 +110,8 @@ func LoadApp(app *App) {
 	app.Log.SaveName = viper.GetString("app.log.saveName")
 	app.Log.FileExt = viper.GetString("app.log.fileExt")
 	app.Log.TimeFormat = viper.GetString("app.log.timeFormat")
-	app.Image.PrefixUrl = viper.GetString("app.image.prefixUrl")
-	app.Image.SavePath = viper.GetString("app.image.savePath")
-	app.Image.MaxSize = viper.GetInt("app.image.maxSize")* 1024 * 1024
-	app.Image.AllowExts = viper.GetStringSlice("app.image.allowExts")
+	app.File.PrefixUrl = viper.GetString("app.file.prefixUrl")
+	app.File.SavePath = viper.GetString("app.file.savePath")
+	app.File.MaxSize = viper.GetInt("app.file.maxSize") * 1024 * 1024 * 500
+	app.File.AllowExts = viper.GetStringSlice("app.file.allowExts")
 }

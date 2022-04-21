@@ -20,13 +20,13 @@ server:
   readTimeOut: 60
   writeTimeOut: 60
 
-database:
-  type: "mysql"
-  user: "root"
-  pwd: "123456"
-  url: "127.0.0.1:3306"
-  name: "web"
-  tablePrefix: "blog_"
+#database:
+#  type: "mysql"
+#  user: "root"
+#  pwd: "123456"
+#  url: "127.0.0.1:3306"
+#  name: "web"
+#  tablePrefix: "blog_"
 
 
 

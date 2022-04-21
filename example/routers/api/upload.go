@@ -23,14 +23,14 @@ func UploadImage(c *gin.Context) {
 		r = r.SetStatus(resp.INVALID_PARAMS)
 	} else {
 		//ext := path.Ext(image.Filename)
-		imageName := upload.GetImageName(image.Filename)
-		fullPath := upload.GetImageFullPath()
-		savePath := upload.GetImagePath()
+		imageName := upload.GetFileName(image.Filename)
+		fullPath := upload.GetFileFullPath()
+		savePath := upload.GetFilePath()
 		src := fullPath + imageName
-		if ! upload.CheckImageExt(imageName) || ! upload.CheckImageSize(file) {
+		if ! upload.CheckFileExt(imageName) || ! upload.CheckFileSize(file) {
 			r = r.SetStatus(resp.ERROR_UPLOAD_CHECK_IMAGE_FORMAT)
 		} else {
-			err := upload.CheckImage(fullPath)
+			err := upload.CheckFile(fullPath)
 			if err != nil {
 				logging.Warn(err)
 				r = r.SetStatus(resp.ERROR_UPLOAD_CHECK_IMAGE_FAIL)
@@ -38,7 +38,7 @@ func UploadImage(c *gin.Context) {
 				logging.Warn(err)
 				r = r.SetStatus(resp.ERROR_UPLOAD_SAVE_IMAGE_FAIL)
 			} else {
-				data["image_url"] = upload.GetImageFullUrl(imageName)
+				data["image_url"] = upload.GetFileFullUrl(imageName)
 				data["image_save_url"] = savePath + imageName
 			}
 		}

@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8aefa33b-4623-47f7-8ad8-c6c75e40f717" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/routers/api/v1/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/routers/api/v1/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/models.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +184,11 @@
           <url>file://$PROJECT_DIR$/pkg/logging/file.go</url>
           <line>2</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/example/main.go</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

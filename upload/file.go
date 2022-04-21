@@ -17,8 +17,12 @@ import (
 上传文件
 */
 
-func GetFileFullUrl(name string) string {
-	return setting.AppSetting.File.PrefixUrl + "/" + GetFilePath() + name
+func GetFileFullUrl(subDic , name string) string {
+	if strings.Contains(subDic, "/") {
+		subDic = strings.TrimLeft(subDic, "/")
+		subDic = strings.TrimRight(subDic, "/")
+	}
+	return setting.AppSetting.File.PrefixUrl + "/" + GetFilePath() + subDic+ "/" + name
 }
 
 func GetFileName(name string) string {
